@@ -1,11 +1,24 @@
-# controle-de-estoque
+# 📦 Controle de Estoque - Python
 
-Projeto simples em Python para controlar estoque pelo terminal.
+Sistema de controle de estoque simples feito em Python. Permite adicionar e retirar produtos com validação.
 
-- Começa com 1000 itens no estoque
-- 1 - Adicionar itens
-- 2 - Retirar itens (com verificação pra não ficar negativo)
-- 3 - Sair
+## 🚀 Funcionalidades
 
+- ✅ Adicionar quantidade ao estoque
+- ✅ Retirar quantidade com validação
+- ✅ Não deixa retirar mais do que tem
+- ✅ Mostra estoque atual em tempo real
+- ✅ Menu interativo
+
+## 🛠️ Tecnologias
+
+- Python 3
+- Lógica de programação (while, if/else)
+
+## 📁 Como usar
+
+1. Clone o repositório:
 ```bash
+git clone https://github.com/henrique-martins-pereira/controle_estoque.git
+cd controle_estoque
 python estoque.py
