@@ -1,6 +1,6 @@
 # controle-de-estoque
 
-Projeto simples em Python para controlar estoque pelo terminal. se
+Projeto simples em Python para controlar estoque pelo terminal.
 
 - Começa com 1000 itens no estoque
 - 1 - Adicionar itens
