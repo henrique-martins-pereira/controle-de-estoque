@@ -18,7 +18,9 @@ Sistema de controle de estoque simples feito em Python. Permite adicionar e reti
 ## 📁 Como usar
 
 1. Clone o repositório:
+https://github.com/henrique-martins-pereira/controle-de-estoque.git
+
+2. Rode o programa:
 ```bash
-git clone https://github.com/henrique-martins-pereira/controle_estoque.git
-cd controle_estoque
+cd controle-de-estoque
 python estoque.py
