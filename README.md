@@ -4,16 +4,16 @@ Um programa simples em Python para controlar a quantidade de produtos em estoque
 
 ## 🚀 Funcionalidades
 
--✅Adicionar itens ao estoque
--✅Retirar itens do estoque
--✅Consultar o estoque atual
--✅Salvar os dados automaticamente
--✅Impedir a retirada de uma quantidade maior que o estoque disponível
+- ✅Adicionar itens ao estoque
+- ✅Retirar itens do estoque
+- ✅Consultar o estoque atual
+- ✅Salvar os dados automaticamente
+- ✅Impedir a retirada de uma quantidade maior que o estoque disponível
 
 ## 🛠️ Tecnologias
 
-Python
-Biblioteca json
+- Python
+- Biblioteca json
 
 ## 📁 Como usar
 
