@@ -24,7 +24,3 @@ https://github.com/henrique-martins-pereira/controle-de-estoque.git
 ```bash
 cd controle-de-estoque
 python estoque.py
-
-## 🧑‍💻Autor
-
-Henrique Martins Pereira
