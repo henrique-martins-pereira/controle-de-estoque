@@ -1,0 +1,93 @@
+import sqlite3
+
+conn = sqlite3.connect('Estoque.db')
+cursor = conn.cursor()
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS estoque (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT NOT NULL,
+        quantidade INTEGER NOT NULL 
+)
+''')
+
+conn.commit()
+
+def adicionar_estoque():
+    print("ADICIONAR ESTOQUE")
+    print("-"*20)
+    nome = input("Nome do Produto: ")
+    quantidade = int(input("Quantidade: "))
+    
+    cursor.execute("INSERT INTO estoque (nome, quantidade) VALUES (?,?)", (nome, quantidade))
+    conn.commit()
+    print(f"Produto {nome} adicionado com sucesso!")
+ 
+def ver_estoque():
+    print("VER ESTOQUE")
+    print("-"*20)
+    cursor.execute("SELECT * FROM estoque")
+    estoques = cursor.fetchall()
+    for estoque in estoques:
+        print(f"ID: {estoque[0]} | Produto: {estoque[1]} | Quantidade: {estoque[2]}")
+
+def remover_estoque():
+    print("REMOVER ESTOQUE")
+    cursor.execute("SELECT * FROM estoque")
+    estoques = cursor.fetchall()
+    
+    for estoque in estoques:
+        print(f"ID: {estoque[0]} | Nome: {estoque[1]} | Quantidade: {estoque[2]}")
+
+    while True:
+        try:
+            produto = int(input("Escolha o id do produto: "))
+            cursor.execute("DELETE FROM estoque WHERE id = ?", (produto,))
+            conn.commit() 
+            
+            if cursor.rowcount > 0:
+                print(f"Produto {produto} removido!")
+            else:
+                print("ID não encontrado.")
+            break
+
+        except ValueError:
+            print("Digite apenas números!")
+            
+def atualizar_estoque():
+    print("ATUALIZAR ESTOQUE")
+    cursor.execute("SELECT * FROM estoque")
+    estoques = cursor.fetchall()
+    for estoque in estoques:
+        print(f"ID: {estoque[0]} | Nome: {estoque[1]} | Quantidade: {estoque[2]}")
+
+        #Atualizar        
+    while True:
+        id = int()
+
+#Adicionar while
+while True:
+    print("-"*20)
+    print("CONTROLE DE ESTOQUE")
+    print('''
+1. Adicionar Estoque
+2. Ver Estoque 
+3. Tirar produto do estoque 
+4. SAIR
+    ''')
+    opcao = int(input("Escolha o número desejado: "))
+    
+    if opcao == 1:
+        adicionar_estoque()
+    elif opcao == 2:
+        print("-"*20)
+        ver_estoque()
+    elif opcao == 3:
+        print("-"*20)
+        remover_estoque()
+    elif opcao == 4:
+        print("-"*20)
+        print("SAINDO...")
+        break
+    else:
+        print("Opção inválida!")
