@@ -1,6 +1,6 @@
 # 📦 Controle de Estoque - Python
 
-Um programa simples em Python para controlar a quantidade de produtos em estoque. Os dados são salvos automaticamente em um arquivo estoque.json.
+Um programa simples em Python para controlar a quantidade de produtos em estoque. Os dados são salvos automaticamente em um banco de dados local.
 
 ## 🚀 Funcionalidades
 
