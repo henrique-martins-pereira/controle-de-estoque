@@ -5,6 +5,7 @@ Um programa simples em Python para controlar a quantidade de produtos em estoque
 ## 🚀 Funcionalidades
 
 - ✅Adicionar itens ao estoque
+- ✅Atualizar um produto no estoque
 - ✅Retirar itens do estoque
 - ✅Consultar o estoque atual
 - ✅Salvar os dados automaticamente
@@ -13,7 +14,7 @@ Um programa simples em Python para controlar a quantidade de produtos em estoque
 ## 🛠️ Tecnologias
 
 - Python
-- Biblioteca json
+- SQLite3
 
 ## 📁 Como usar
 
